@@ -12,6 +12,7 @@ export default class InputBox extends React.Component {
     }
     handleSubmit(event) {
         event.preventDefault();
+        console.log("INSIDE HANDLE SUBMIT");
 //        const newGuess=document.getElementById("inputField").value;
         const newGuessNode=event.target.number;
         this.props.CB(newGuessNode.value);
@@ -20,6 +21,7 @@ export default class InputBox extends React.Component {
     };
 
     render () {
+        console.log("HELLO FROM INPUTBOX");
         return (
             <div className="inputBoxContainer">
                 <div className="formContainer" >

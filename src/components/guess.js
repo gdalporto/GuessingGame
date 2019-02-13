@@ -17,7 +17,7 @@ export default class Guess extends React.Component {
         }
     }
     setGuess(userGuess) {
-        console.log("userGuess",userGuess);
+//        console.log("userGuess",userGuess);
         this.setState({
             userGuess,
             guessList: this.state.guessList.concat(userGuess)
@@ -25,7 +25,13 @@ export default class Guess extends React.Component {
         }, function(){console.log("newState",this.state)})
     }
     restartGame() {
-        window.location.reload();
+        this.setState({
+            userGuess:null,
+            winningNumber: Math.round(Math.random()*100),
+            guessList:[],
+            overlay:false
+        })
+    //        window.location.reload();
     }
     handleOverlay(overlayToggle) {
         this.setState({

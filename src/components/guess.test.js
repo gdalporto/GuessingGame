@@ -27,6 +27,17 @@ describe('<Guess /> component testing',()=>{
 
     it('should restart game on click', ()=>{
 
+        // const wrapper = shallow(<Guess />);
+        // wrapper.setState({
+        //     userGuess: 63,
+        //     guessList: [22, 39, 63]
+        // })
+
+        // wrapper.instance().restartGame();
+        // expect(wrapper.state('userGuess')).toBe(null);
+        // expect(wrapper.state('guessList')).toEqual([]);
+
+        window.location.reload = jest.fn();
         const wrapper = shallow(<Guess />);
         wrapper.setState({
             userGuess: 63,
@@ -34,8 +45,8 @@ describe('<Guess /> component testing',()=>{
         })
 
         wrapper.instance().restartGame();
-        expect(wrapper.state('userGuess')).toBe(null);
-        expect(wrapper.state('guessList')).toEqual([]);
+        expect(window.location.reload).toHaveBeenCalled();
+
 
     })
 

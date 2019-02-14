@@ -1,0 +1,12 @@
+// set language to Node.js
+language: node_js
+node_js: node
+
+// enable caching of dependencies in the node_modules folder. This improves speed.
+cache:
+  directories:
+    - node_modules
+
+// ensures system doesn’t keep watching for changes in teh source code to re-rerun the tests.
+env:
+  - CI=true

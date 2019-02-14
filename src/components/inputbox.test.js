@@ -24,8 +24,8 @@ describe('<InputBox /> component testing',()=>{
         console.log("NUMBER INPUTED BEFORE SUBMIT IS", wrapper.find('input[type="number"]').instance().value)
         wrapper.simulate('submit');
         console.log("AFTER SUBMIT")
-//        expect(wrapper.find('input[type="number"]').instance().value).toEqual(value.toString());
-        expect(callback).toHaveBeenCalled;    
+        expect(wrapper.find('input[type="number"]').instance().value).toEqual(value.toString());
+//        expect(callback).toHaveBeenCalled();    
 //        expect(callback).toHaveBeenCalledWith(value.toString());    
     })
 

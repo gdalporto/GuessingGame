@@ -46,6 +46,7 @@ describe('<Guess /> component testing',()=>{
 
         wrapper.instance().restartGame();
         expect(window.location.reload).toHaveBeenCalled();
+        window.location.reload.mockRestore();
 
 
     })

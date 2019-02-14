@@ -25,13 +25,14 @@ export default class Guess extends React.Component {
         }, function(){console.log("newState",this.state)})
     }
     restartGame() {
-        this.setState({
-            userGuess:null,
-            winningNumber: Math.round(Math.random()*100),
-            guessList:[],
-            overlay:false
-        })
-    //        window.location.reload();
+        // this.setState({
+        //     userGuess:null,
+        //     winningNumber: Math.round(Math.random()*100),
+        //     guessList:[],
+        //     overlay:false
+        // })
+           window.location.reload();
+           
     }
     handleOverlay(overlayToggle) {
         this.setState({

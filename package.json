@@ -24,6 +24,9 @@
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "10.12.0"
+  },
   "browserslist": [
     ">0.2%",
     "not dead",

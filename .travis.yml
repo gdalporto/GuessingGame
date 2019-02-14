@@ -1,12 +1,14 @@
-// set language to Node.js
 language: node_js
 node_js: node
-
-// enable caching of dependencies in the node_modules folder. This improves speed.
 cache:
   directories:
-    - node_modules
-
-// ensures system doesn’t keep watching for changes in teh source code to re-rerun the tests.
+  - node_modules
 env:
-  - CI=true
+- CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: N7p1oRm+4tvhzUp/YMj5MWXTfBMTfAmBg1xATOVC6jm9CvVkRdoLtJwHjZjnLJ+CT5Q9gjUfkA+NnL27PH4e3sV1ao4QDQUw3XY0vtpvQ3wrZdXPuZaQhkc24wCnE15Njs3TDKDYYC98AMcaaoQxev0hIvMzGrmS960hDgtWK03R4AGM9fLGiqFMs9PkQXUrQnLGqUUzKQNxCYDhxfyP8xqiK9PT99c73UOibgrUXBYnzStbulUhf+Pi+G08edeA6lUGvDWpF3xDZ+UoRrdhAzToHlbbCibbwxJJIn4VKU2DSb68infuBfo0zdLczgS0fE9pSmcy2NsM1GMQfNHGAzRjN79UBJRLHlPZ+gddPV8fQiuRKwRu+LkmL3D5t1on0FG7UlpM6XGTNcVnwL+5hI6o7eGT+3OHaPEIyNCz1XtwgdIkSfZpU6AycNQDTP4RmZvNSYyuMIteiHCRjwphHhGgb32nmizWW+Vj6wCxLot+OVjOf4JU3pGNoMdw5bPVSeI5DSrmVqh7eNEE66zMIF2EmjU2T+OKjInA1HsL7iWMj3BtcBal2mx6++CzCopoNb6NdBrwH9LWL6ACsoaLDMe/J8vz08Y1jqC5quBITo4CCXu6KTNHMlT2fk0rmVmnplJc2xrWGOiz6J8JhgdMIaBYrCoCVLomIDE9kuZQvcw=
+  app: shielded-atoll-61236
+  on:
+    repo: gdalporto/GuessingGame
